@@ -1,7 +1,8 @@
 #include "main"
 
 /**
- * print_numbers - Print the numbers since 0 up to 9
+ * print_numbers - checks for checks for a digit (0 through 9).
+ *
  * Return: Always 0
  */
 
