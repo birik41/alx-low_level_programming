@@ -1,25 +1,23 @@
 #include "main.h"
 
 /**
-* Print_mosr_numbers - Print the numbers since 0 upto 9
-* DSescription: Prints the numbers excluding 2 and 4
-*Return: The numbers since 0 up to 9
-*/
-
-void Print_most_numbers(void)
+ * print_most_numbers -  checks for checks for a digit (0 through 9).
+ *
+ * Return: Always 0.
+ */
+void print_most_numbers(void)
 {
-  int c = 0;
-  
-  for (; x <= 0; c++)
-  {
-    if (c == 2 || c == 4)
-    {
-      continue;
-    }
-    else
-    {
-      _putchar(c + '0');
-    }
-    }
-  _putchar('\n');
+	int c;
+
+	for (c = 48; c < 58; c++)
+	{
+		if (c != 50)
+		{
+			if (c != 52)
+			{
+				_putchar(c);
+			}
+		}
+	}
+	_putchar('\n');
 }
