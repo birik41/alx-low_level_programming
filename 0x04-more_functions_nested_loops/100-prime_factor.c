@@ -1,23 +1,39 @@
-#include "main.h"
+#include <stdio.h>
+#include <math.h>
 
 /**
- * print_most_numbers -  checks for checks for a digit (0 through 9).
- *
- * Return: Always 0.
+ * main - finds and prints the largest prime factor of the number 612852475143
+ * followed by a new line
+ * Return: Always 0 (Success)
  */
-void print_most_numbers(void)
+int main(void)
 {
-	int c;
+	long int n;
+	long int max;
+	long int i;
 
-	for (c = 48; c < 58; c++)
+	n = 612852475143;
+	max = -1;
+
+	while (n % 2 == 0)
 	{
-		if (c != 50)
+		max = 2;
+		n /= 2;
+	}
+
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
 		{
-			if (c != 52)
-			{
-				_putchar(c);
-			}
+			max = i;
+			n = n / i;
 		}
 	}
-	_putchar('\n');
+
+	if (n > 2)
+		max = n;
+
+	printf("%ld\n", max);
+
+	return (0);
 }
